@@ -6,6 +6,10 @@ import lombok.extern.slf4j.Slf4j;
 public class Utils {
 
     //WEB SEARCH
+    public static final String EMPTY_STRING = "";
+    public static final String NEW_LINE = "\n";
+    public static final String PYTHON_COMMAND = "python3";
+    public static final String PATH_TO_SCRIPT = "src/main/java/com/Backend/NewsAggregator/PythonScripts/rake-headlines-bs4.py";
     public static final String PREFIX_SEARCH = "https://news.google.com/search?q=";
     public static final String SUFFIX_SEARCH = "&hl=en-US&gl=US&ceid=US%3Aen";
 

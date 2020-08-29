@@ -1,5 +1,6 @@
 package com.Backend.NewsAggregator.Repositories;
 
+import com.Backend.NewsAggregator.Models.NewsDetails;
 import com.Backend.NewsAggregator.Utils.Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
@@ -7,31 +8,35 @@ import org.springframework.stereotype.Repository;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 @Repository
 @Slf4j
 public class NewsAggregatorRepository {
 
-    public String crawlNews(String topic) {
+    public List<NewsDetails> crawlNews(String topic) {
         if (topic.length() > 0) {
-            String headlines = "";
+            String headline;
             try {
-                String[] command = {"python3", "src/main/java/com/Backend/NewsAggregator/PythonScripts/rake-headlines-bs4.py", topic};
+                String[] command = {Utils.PYTHON_COMMAND, Utils.PATH_TO_SCRIPT, topic};
                 Process process = Runtime.getRuntime().exec(command);
                 BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
-                String toReturn = "";
+                List<NewsDetails> toReturn = new ArrayList<>();
 
-                while ((headlines = input.readLine()) != null)
+                while ((headline = input.readLine()) != null)
                 {
-                    toReturn = toReturn + headlines + "\n";
+                    if (headline.equals(Utils.EMPTY_STRING) || headline.equals(Utils.NEW_LINE))
+                        continue;
+                    NewsDetails curr = new NewsDetails(headline, input.readLine(), input.readLine(), input.readLine());
+                    toReturn.add(curr);
                 }
                 return toReturn;
             } catch (IOException e) {
                 log.error(e.getMessage());
-                return Utils.READ_LINE_FAILED;
             }
         }
-        return Utils.SHORT_INPUT;
+        return new ArrayList<>();
     }
 }

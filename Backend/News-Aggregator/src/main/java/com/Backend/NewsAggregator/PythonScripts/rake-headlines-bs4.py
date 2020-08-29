@@ -10,7 +10,7 @@ def acquire_recent_news(url):
         return l, val
 
     source = requests.get(url)
-    soup = BeautifulSoup(source.content, 'html.parser') #create the actual object
+    soup = BeautifulSoup(source.content, 'html.parser')
 
     search_results = soup.find('div', class_="lBwEZb BL5WZb xP6mwf")
     time_dict = {}
@@ -39,16 +39,11 @@ def news_by_topic(topic):
     to_return = "";
     for key, entry in zip(d.keys(), t.keys()):
         to_return = to_return + key + "\n" + d[key] + "\n" + t[entry] + "\n" + entry + "\n" + "\n"
-        # print(key)
-        # print(d[key])
-        # print(t[entry])
-        # print(entry)
-        # print('\n')
     return to_return
 
 
 def main():
-    print(news_by_topic("water crisis"))#sys.argv[1]))
+    print(news_by_topic(sys.argv[1]))
 
 
 if __name__ == "__main__":
