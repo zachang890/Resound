@@ -4,5 +4,13 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Utils {
-    public static final String WATER_CRISIS = "water crisis";
+
+    //WEB SEARCH
+    public static final String PREFIX_SEARCH = "https://news.google.com/search?q=";
+    public static final String SUFFIX_SEARCH = "&hl=en-US&gl=US&ceid=US%3Aen";
+
+    //ERRORS
+    public static final String CONNECTION_FAILED = "IOException thrown, connection failed";
+    public static final String READ_LINE_FAILED = "IOException thrown, failed to read line";
+    public static final String SHORT_INPUT = "Input length too short";
 }

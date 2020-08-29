@@ -1,4 +1,5 @@
 import requests
+import sys
 from bs4 import BeautifulSoup
 
 
@@ -35,9 +36,20 @@ def acquire_recent_news(url):
 
 def news_by_topic(topic):
     d, t = acquire_recent_news("https://news.google.com/search?q="+topic+"&hl=en-US&gl=US&ceid=US%3Aen")
+    to_return = "";
     for key, entry in zip(d.keys(), t.keys()):
-        print(key)
-        print(d[key])
-        print(t[entry])
-        print(entry)
-        print('\n')
+        to_return = to_return + key + "\n" + d[key] + "\n" + t[entry] + "\n" + entry + "\n" + "\n"
+        # print(key)
+        # print(d[key])
+        # print(t[entry])
+        # print(entry)
+        # print('\n')
+    return to_return
+
+
+def main():
+    print(news_by_topic("water crisis"))#sys.argv[1]))
+
+
+if __name__ == "__main__":
+    main()
