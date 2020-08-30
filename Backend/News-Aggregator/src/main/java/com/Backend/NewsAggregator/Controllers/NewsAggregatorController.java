@@ -18,12 +18,9 @@ public class NewsAggregatorController {
     @Autowired
     NewsAggregatorService newsAggregatorService;
 
-    @GetMapping("/topic/{topic}") //convert to hbs file
-    @ApiOperation(value = "Retrieve most recent headlines",
-            notes = "Provide topic to retrieve headlines",
-            response = List.class) //What it does, response is a Contact module
-    public List<NewsDetails> newsByTopic(@ApiParam(value = "News topic", required = true)
-                                             @PathVariable("topic") String topic) {
+    @GetMapping("/{topic}") //convert to hbs file
+    @ApiOperation(value = "Retrieve most recent headlines", notes = "Provide topic to retrieve headlines", response = List.class)
+    public List<NewsDetails> newsByTopic(@ApiParam(value = "News topic", required = true) @PathVariable("topic") String topic) {
         return newsAggregatorService.attemptCrawl(topic);
     }
 }
