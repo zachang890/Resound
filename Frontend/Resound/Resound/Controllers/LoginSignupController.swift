@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginSignupController: UIViewController {
+    
+    @IBOutlet var loginSignupBackground: UIImageView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        loginSignupBackground.image = UIImage(named: "Waterfall - Nathan Anderson")
     }
-
+    
+    
 
 }
 

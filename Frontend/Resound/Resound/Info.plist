@@ -53,6 +53,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Jost-ExtraLight.ttf</string>
+		<string>Jost-Light.ttf</string>
+		<string>Jost-Medium.ttf</string>
+		<string>Jost-Regular.ttf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
