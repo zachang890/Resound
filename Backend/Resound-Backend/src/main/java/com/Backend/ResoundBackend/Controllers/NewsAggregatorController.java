@@ -20,7 +20,7 @@ public class NewsAggregatorController {
     NewsAggregatorInterface newsAggregatorInterface;
 
     @GetMapping("/{topic}")
-    public List<NewsDetails> newsByTopic(@PathVariable("topic") String topic) {
+    public List<NewsDetails> retrieveNewsByTopic(@PathVariable("topic") String topic) {
         return newsAggregatorInterface.retrieveNewsByTopic(topic);
     }
 }
