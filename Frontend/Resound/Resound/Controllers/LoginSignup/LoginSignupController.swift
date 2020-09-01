@@ -30,10 +30,14 @@ class LoginSignupController: UIViewController {
         loginSignupBackground.image = UIImage(named: "Melancholy Cloud - Pawel Nolbert")
         loginButton.layer.cornerRadius = 15
         signupButton.layer.cornerRadius = 15
-        
     }
     
-    
-
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { if segue.identifier == "showRestaurantDetail" {
+//    if let indexPath = tableView.indexPathForSelectedRow {
+//    let destinationController = segue.destination as! RestaurantDe
+//    tailViewController
+//    destinationController.restaurantImageName = restaurantImages[i
+//    ndexPath.row] }
+//    } }
 }
 
