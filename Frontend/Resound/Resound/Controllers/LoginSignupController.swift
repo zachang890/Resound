@@ -27,7 +27,7 @@ class LoginSignupController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginSignupBackground.image = UIImage(named: "Waterfall - Nathan Anderson")
+        loginSignupBackground.image = UIImage(named: "Melancholy Cloud - Pawel Nolbert")
         loginButton.layer.cornerRadius = 15
         signupButton.layer.cornerRadius = 15
         
