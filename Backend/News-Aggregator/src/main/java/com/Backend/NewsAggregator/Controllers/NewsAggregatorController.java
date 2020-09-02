@@ -23,4 +23,9 @@ public class NewsAggregatorController {
     public List<NewsDetails> newsByTopic(@ApiParam(value = "News topic", required = true) @PathVariable("topic") String topic) {
         return newsAggregatorService.attemptCrawl(topic);
     }
+
+    @GetMapping("/bruh")
+    public String thisTest() {
+        return "NICE";
+    }
 }

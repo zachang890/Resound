@@ -43,7 +43,7 @@ def news_by_topic(topic):
 
 
 def main():
-    print(news_by_topic(sys.argv[1]))
+    print(news_by_topic("water crisis"))#sys.argv[1]))
 
 
 if __name__ == "__main__":
