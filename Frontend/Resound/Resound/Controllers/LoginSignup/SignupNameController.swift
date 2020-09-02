@@ -27,6 +27,11 @@ class SignupNameController: UIViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         submit.layer.cornerRadius = 15
         
+        firstName.attributedPlaceholder = NSAttributedString(string: "First Name",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        lastName.attributedPlaceholder = NSAttributedString(string: "Last Name",
+                attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+        
         
         NotificationCenter.default.addObserver(self, selector: #selector(SignupNameController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
       
