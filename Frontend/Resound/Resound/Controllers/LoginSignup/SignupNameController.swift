@@ -12,6 +12,7 @@ class SignupNameController: UIViewController {
     
     @IBOutlet var firstName: UITextField!
     @IBOutlet var lastName: UITextField!
+    @IBOutlet var submit: UIButton!
 
     var activeTextField : UITextField? = nil
     
@@ -21,8 +22,10 @@ class SignupNameController: UIViewController {
         firstName.delegate = self
         lastName.delegate = self
         
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        submit.layer.cornerRadius = 15
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(SignupNameController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -55,13 +58,13 @@ class SignupNameController: UIViewController {
             topOfKeyboard = Float(self.view.frame.height - keyboardSize.height)
 
             // if the bottom of Textfield is below the top of keyboard, move up
-            if bottomOfTextField! > topOfKeyboard! {
+            if (bottomOfTextField! + 80) > topOfKeyboard! {
               shouldMoveViewUp = true
             }
         }
 
         if(shouldMoveViewUp) {
-            self.view.frame.origin.y = CGFloat(0 - (bottomOfTextField! - topOfKeyboard!) - 100)
+            self.view.frame.origin.y = CGFloat(0 - (bottomOfTextField! - topOfKeyboard!) - 70)
         }
     }
 
