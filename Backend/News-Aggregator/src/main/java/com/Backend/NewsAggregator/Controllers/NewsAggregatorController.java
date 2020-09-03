@@ -2,12 +2,15 @@ package com.Backend.NewsAggregator.Controllers;
 
 import com.Backend.NewsAggregator.Models.NewsDetails;
 import com.Backend.NewsAggregator.Services.NewsAggregatorService;
+import com.gargoylesoftware.htmlunit.WebClient;
+import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -26,6 +29,14 @@ public class NewsAggregatorController {
 
     @GetMapping("/bruh")
     public String thisTest() {
-        return "NICE";
+        WebClient client = new WebClient();
+        String baseUrl = "https://news.google.com/search?q="+"water crisis"+"&hl=en-US&gl=US&ceid=US%3Aen";
+        try {
+            HtmlPage page = client.getPage(baseUrl);
+            return page.asXml();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }
