@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 
 
 def acquire_recent_news(url):
@@ -37,12 +38,25 @@ def news_by_topic(topic):
     d, t = acquire_recent_news("https://news.google.com/search?q="+topic+"&hl=en-US&gl=US&ceid=US%3Aen")
     to_return = "";
     for key, entry in zip(d.keys(), t.keys()):
-        to_return = to_return + key + "\n" + d[key] + "\n" + t[entry] + "\n" + entry + "\n" + "\n"
+        to_return = to_return + key + '\n' + d[key] + '\n' + t[entry] + '\n' + entry + '\n'
     return to_return
 
-def main():
-    return news_by_topic("water crisis")
+def main(topic):
+    return news_by_topic(topic)
 
-if __name__ == "__main__":
-    application.run()
+topic = ""
+def lambda_handler(event, context):
+    http_method = event['httpMethod']
+    
+    if http_method == "GET":
+        topic = event['queryStringParameters']['topic']
+    elif http_method == "POST":
+        body = json.loads(event['body'])
+        topic = body['topic']
+        
+    to_return = main(topic)
+    return {
+        "statusCode": 200,
+        "body": json.dumps(to_return)
+    }
 
