@@ -1,10 +1,10 @@
-package com.Backend.ResoundBackend;
+package com.Backend.DynamoAccess;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ResoundBackendApplicationTests {
+class DynamoAccessApplicationTests {
 
 	@Test
 	void contextLoads() {
