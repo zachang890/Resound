@@ -1,11 +1,9 @@
 package com.Backend.ResoundBackendMain.Models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Data
@@ -14,11 +12,4 @@ public class NewsDetails {
     private String url;
     private String source;
     private String time;
-
-    public NewsDetails() {
-        headline = "";
-        url = "";
-        source = "";
-        time = "";
-    }
 }

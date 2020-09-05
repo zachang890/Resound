@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		963E0A6A24FEE42200D7622F /* SignupNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963E0A6924FEE42200D7622F /* SignupNameController.swift */; };
 		966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0224FC57DA006A1328 /* AppDelegate.swift */; };
 		966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0424FC57DA006A1328 /* SceneDelegate.swift */; };
-		966CEA0724FC57DA006A1328 /* LoginSignupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0624FC57DA006A1328 /* LoginSignupController.swift */; };
 		966CEA0A24FC57DA006A1328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA0824FC57DA006A1328 /* Main.storyboard */; };
 		966CEA0C24FC57DD006A1328 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA0B24FC57DD006A1328 /* Assets.xcassets */; };
 		966CEA0F24FC57DD006A1328 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA0D24FC57DD006A1328 /* LaunchScreen.storyboard */; };
@@ -32,14 +30,14 @@
 		966CEA3A24FC7092006A1328 /* Jost-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA2824FC7091006A1328 /* Jost-ThinItalic.ttf */; };
 		966CEA3B24FC7092006A1328 /* Jost-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA2924FC7091006A1328 /* Jost-Italic.ttf */; };
 		966CEA3C24FC7092006A1328 /* Jost-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA2A24FC7092006A1328 /* Jost-MediumItalic.ttf */; };
+		96C88DCF2503E8110000127E /* TodayTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C88DCE2503E8110000127E /* TodayTopicController.swift */; };
+		96C88DD22503EDE70000127E /* TopicSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C88DD12503EDE70000127E /* TopicSuggestions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		963E0A6924FEE42200D7622F /* SignupNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameController.swift; sourceTree = "<group>"; };
 		966CE9FF24FC57DA006A1328 /* Resound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966CEA0224FC57DA006A1328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		966CEA0424FC57DA006A1328 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		966CEA0624FC57DA006A1328 /* LoginSignupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupController.swift; sourceTree = "<group>"; };
 		966CEA0924FC57DA006A1328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		966CEA0B24FC57DD006A1328 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		966CEA0E24FC57DD006A1328 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +60,8 @@
 		966CEA2824FC7091006A1328 /* Jost-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-ThinItalic.ttf"; sourceTree = "<group>"; };
 		966CEA2924FC7091006A1328 /* Jost-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Italic.ttf"; sourceTree = "<group>"; };
 		966CEA2A24FC7092006A1328 /* Jost-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-MediumItalic.ttf"; sourceTree = "<group>"; };
+		96C88DCE2503E8110000127E /* TodayTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTopicController.swift; sourceTree = "<group>"; };
+		96C88DD12503EDE70000127E /* TopicSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSuggestions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		963E0A6B24FEE5BF00D7622F /* LoginSignup */ = {
-			isa = PBXGroup;
-			children = (
-				966CEA0624FC57DA006A1328 /* LoginSignupController.swift */,
-				963E0A6924FEE42200D7622F /* SignupNameController.swift */,
-			);
-			path = LoginSignup;
-			sourceTree = "<group>";
-		};
 		966CE9F624FC57DA006A1328 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +94,7 @@
 		966CEA0124FC57DA006A1328 /* Resound */ = {
 			isa = PBXGroup;
 			children = (
+				96C88DD02503EDCE0000127E /* Models */,
 				966CEA1824FC704A006A1328 /* Fonts */,
 				966CEA1724FC65A2006A1328 /* Storyboards */,
 				966CEA1624FC6466006A1328 /* Controllers */,
@@ -117,7 +109,7 @@
 		966CEA1624FC6466006A1328 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				963E0A6B24FEE5BF00D7622F /* LoginSignup */,
+				96C88DCE2503E8110000127E /* TodayTopicController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +146,14 @@
 				966CEA2824FC7091006A1328 /* Jost-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		96C88DD02503EDCE0000127E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96C88DD12503EDE70000127E /* TopicSuggestions.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,10 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				963E0A6A24FEE42200D7622F /* SignupNameController.swift in Sources */,
-				966CEA0724FC57DA006A1328 /* LoginSignupController.swift in Sources */,
 				966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */,
 				966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */,
+				96C88DCF2503E8110000127E /* TodayTopicController.swift in Sources */,
+				96C88DD22503EDE70000127E /* TopicSuggestions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
