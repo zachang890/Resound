@@ -1,6 +1,7 @@
 package com.Backend.ResoundBackendMain.Controllers;
 
 import com.Backend.ResoundBackendMain.Interfaces.DynamoInterface;
+import com.Backend.ResoundBackendMain.Models.ConvertToJSON;
 import com.Backend.ResoundBackendMain.Utils.Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class SuggestionsController {
     DynamoInterface dynamoInterface;
 
     @GetMapping("/topics-list")
-    public List<String> retrieveTopics() {
+    public ConvertToJSON retrieveTopics() {
         Random rand = new Random();
         List<String> preProcess = dynamoInterface.retrieveTopicsList();
         List<String> postProcess = new ArrayList<>();
@@ -30,6 +31,6 @@ public class SuggestionsController {
             postProcess.add(preProcess.get(nextRand));
             preProcess.remove(nextRand);
         }
-        return postProcess;
+        return new ConvertToJSON(postProcess);
     }
 }
