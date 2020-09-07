@@ -10,5 +10,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ConvertToJSON {
-    private List<String> list;
+    //private List<String> list;
+    private String origin;
 }
