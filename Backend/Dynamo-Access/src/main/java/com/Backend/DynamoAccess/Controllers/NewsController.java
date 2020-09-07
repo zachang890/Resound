@@ -2,6 +2,7 @@ package com.Backend.DynamoAccess.Controllers;
 
 import com.Backend.DynamoAccess.DBLayer.NewsDetailsRepository;
 import com.Backend.DynamoAccess.Models.NewsDetailsDynamo;
+import com.Backend.DynamoAccess.Utils.Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +16,12 @@ public class NewsController {
     NewsDetailsRepository newsDetailsRepository;
 
     @PostMapping("/save-details/{topic}") //Structure of get
-    public NewsDetailsDynamo saveNewsDetails(@PathVariable("topic") String topic) {
+    public NewsDetailsDynamo saveNewsDetails(@PathVariable(Utils.TOPIC) String topic) {
         return newsDetailsRepository.addNewsDetails(topic);
     }
 
     @GetMapping("/details/{topic}")
-    public NewsDetailsDynamo findNewsDetails(@PathVariable("topic") String topic) {
+    public NewsDetailsDynamo findNewsDetails(@PathVariable(Utils.TOPIC) String topic) {
         return newsDetailsRepository.findNewsDetails(topic);
     }
 
@@ -30,7 +31,7 @@ public class NewsController {
     }
 
     @PutMapping("/revisit-details/{topic}")
-    public String updateNewsDetails(@PathVariable("topic") String topic) {
+    public String updateNewsDetails(@PathVariable(Utils.TOPIC) String topic) {
         return newsDetailsRepository.updateNewsDetails(topic);
     }
 }

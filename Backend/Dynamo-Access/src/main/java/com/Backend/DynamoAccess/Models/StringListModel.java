@@ -1,5 +1,6 @@
 package com.Backend.DynamoAccess.Models;
 
+import com.Backend.DynamoAccess.Utils.Utils;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -12,12 +13,12 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@DynamoDBTable(tableName = "Suggestions-collection")
+@DynamoDBTable(tableName = Utils.SUGGESTIONS_COLLECTION)
 public class StringListModel {
 
-    @DynamoDBHashKey(attributeName = "suggestion-category")
+    @DynamoDBHashKey(attributeName = Utils.SUGGESTION_CATEGORY)
     private String suggestionListTitle;
 
-    @DynamoDBAttribute(attributeName = "entries")
+    @DynamoDBAttribute(attributeName = Utils.ENTRIES)
     private List<String> suggestions;
 }

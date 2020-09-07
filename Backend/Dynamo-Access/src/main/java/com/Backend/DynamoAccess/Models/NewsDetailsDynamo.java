@@ -1,5 +1,6 @@
 package com.Backend.DynamoAccess.Models;
 
+import com.Backend.DynamoAccess.Utils.Utils;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
@@ -13,10 +14,10 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@DynamoDBTable(tableName = "Resound-app")
+@DynamoDBTable(tableName = Utils.RESOUND_APP)
 public class NewsDetailsDynamo implements Serializable {
 
-    @DynamoDBHashKey (attributeName = "topic")
+    @DynamoDBHashKey (attributeName = Utils.TOPIC)
     private String topic;
 
     @DynamoDBAttribute

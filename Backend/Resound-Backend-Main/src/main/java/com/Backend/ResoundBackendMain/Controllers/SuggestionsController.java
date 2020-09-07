@@ -6,6 +6,7 @@ import com.Backend.ResoundBackendMain.Utils.Utils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +22,7 @@ public class SuggestionsController {
     @Autowired
     DynamoInterface dynamoInterface;
 
-    @GetMapping("/topics-list")
+    @GetMapping("/today-topics-list")
     public ConvertToJSON retrieveTopics() {
         Random rand = new Random();
         List<String> preProcess = dynamoInterface.retrieveTopicsList();
@@ -32,5 +33,10 @@ public class SuggestionsController {
             preProcess.remove(nextRand);
         }
         return new ConvertToJSON(postProcess);
+    }
+
+    @PutMapping("/daily-topic-change")
+    public void dailyTopicChange() {
+
     }
 }

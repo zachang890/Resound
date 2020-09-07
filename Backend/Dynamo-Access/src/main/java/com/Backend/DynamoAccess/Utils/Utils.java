@@ -10,6 +10,15 @@ public class Utils {
     public static final String REMOVED = "Removed";
     public static final String UPDATED = "Updated";
 
+    public static final int RAND_THRESHOLD = 3;
+
+
     //COLLECTION TITLES
     public static final String TOPICS_LIST = "topics-list";
+    public static final String TODAY_TOPICS = "today-topics";
+    public static final String TOPIC = "topic";
+    public static final String RESOUND_APP = "Resound-app";
+    public static final String SUGGESTIONS_COLLECTION = "Suggestions-collection";
+    public static final String ENTRIES = "entries";
+    public static final String SUGGESTION_CATEGORY = "suggestion-category";
 }

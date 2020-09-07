@@ -4,6 +4,7 @@ import com.Backend.DynamoAccess.DBLayer.SuggestionsRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +21,15 @@ public class SuggestionsController {
     @GetMapping("/suggestions/topics-list")
     public List<String> retrieveTopics() {
         return suggestionsRepository.retrieveTopics();
+    }
+
+    @GetMapping("/suggestions/today-topics")
+    public List<String> retrieveTodayTopics() {
+        return suggestionsRepository.retrieveTodayTopics();
+    }
+
+    @PutMapping("/suggestions/revisit-today-topics")
+    public void revisitTodayTopics() {
+        suggestionsRepository.revisitTodayTopics();
     }
 }
