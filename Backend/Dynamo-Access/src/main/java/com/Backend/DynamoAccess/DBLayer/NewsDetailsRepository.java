@@ -49,7 +49,7 @@ public class NewsDetailsRepository {
     private DynamoDBSaveExpression buildExpression(NewsDetailsDynamo newsDetailsDynamo) {
         DynamoDBSaveExpression dynamoDBSaveExpression = new DynamoDBSaveExpression();
         Map<String, ExpectedAttributeValue> expectedMap = new HashMap<>();
-        expectedMap.put("topic", new ExpectedAttributeValue(new AttributeValue().withS(newsDetailsDynamo.getTopic())));
+        expectedMap.put(Utils.TOPIC, new ExpectedAttributeValue(new AttributeValue().withS(newsDetailsDynamo.getTopic())));
         dynamoDBSaveExpression.setExpected(expectedMap);
         return dynamoDBSaveExpression;
     }

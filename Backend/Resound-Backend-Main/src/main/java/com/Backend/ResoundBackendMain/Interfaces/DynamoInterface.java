@@ -13,6 +13,6 @@ public interface DynamoInterface {
     @GetMapping("/dynamo/details/{topic}")
     public NewsDetailsDynamo retrieveNewsDetails(@PathVariable("topic") String topic);
 
-    @GetMapping("/dynamo/suggestions/topics-list")
+    @GetMapping("/dynamo/suggestions/today-topics")
     public List<String> retrieveTopicsList();
 }
