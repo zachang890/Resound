@@ -31,7 +31,7 @@
 		966CEA3B24FC7092006A1328 /* Jost-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA2924FC7091006A1328 /* Jost-Italic.ttf */; };
 		966CEA3C24FC7092006A1328 /* Jost-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA2A24FC7092006A1328 /* Jost-MediumItalic.ttf */; };
 		96C88DCF2503E8110000127E /* TodayTopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C88DCE2503E8110000127E /* TodayTopicController.swift */; };
-		96C88DD22503EDE70000127E /* TopicSuggestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C88DD12503EDE70000127E /* TopicSuggestions.swift */; };
+		96C88DD42505EFAD0000127E /* HeadlinesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C88DD32505EFAD0000127E /* HeadlinesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +61,7 @@
 		966CEA2924FC7091006A1328 /* Jost-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Italic.ttf"; sourceTree = "<group>"; };
 		966CEA2A24FC7092006A1328 /* Jost-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-MediumItalic.ttf"; sourceTree = "<group>"; };
 		96C88DCE2503E8110000127E /* TodayTopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTopicController.swift; sourceTree = "<group>"; };
-		96C88DD12503EDE70000127E /* TopicSuggestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicSuggestions.swift; sourceTree = "<group>"; };
+		96C88DD32505EFAD0000127E /* HeadlinesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				96C88DCE2503E8110000127E /* TodayTopicController.swift */,
+				96C88DD32505EFAD0000127E /* HeadlinesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -151,7 +152,6 @@
 		96C88DD02503EDCE0000127E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				96C88DD12503EDE70000127E /* TopicSuggestions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,10 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96C88DD42505EFAD0000127E /* HeadlinesTableViewController.swift in Sources */,
 				966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */,
 				966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */,
 				96C88DCF2503E8110000127E /* TodayTopicController.swift in Sources */,
-				96C88DD22503EDE70000127E /* TopicSuggestions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,15 +23,14 @@ public class SuggestionsController {
 
     @GetMapping("/topics-list")
     public ConvertToJSON retrieveTopics() {
-//        Random rand = new Random();
-//        List<String> preProcess = dynamoInterface.retrieveTopicsList();
-//        List<String> postProcess = new ArrayList<>();
-//        for (int i = 0; i < Utils.RAND_THRESHOLD; i++) {
-//            int nextRand = rand.nextInt(preProcess.size());
-//            postProcess.add(preProcess.get(nextRand));
-//            preProcess.remove(nextRand);
-//        }
-//        return new ConvertToJSON(postProcess);
-        return new ConvertToJSON("hi");
+        Random rand = new Random();
+        List<String> preProcess = dynamoInterface.retrieveTopicsList();
+        List<String> postProcess = new ArrayList<>();
+        for (int i = 0; i < Utils.RAND_THRESHOLD; i++) {
+            int nextRand = rand.nextInt(preProcess.size());
+            postProcess.add(preProcess.get(nextRand));
+            preProcess.remove(nextRand);
+        }
+        return new ConvertToJSON(postProcess);
     }
 }
