@@ -14,6 +14,10 @@ class TodayTopicController: UIViewController {
     @IBOutlet var secondTopic: UILabel!
     @IBOutlet var thirdTopic: UILabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
@@ -30,7 +34,7 @@ class TodayTopicController: UIViewController {
     
     
     func updateText() {
-        let postEndpoint: String = "http://backend-main.eba-24mqhk9g.us-west-2.elasticbeanstalk.com/suggestions/topics-list"
+        let postEndpoint: String = "http://backend-main.eba-24mqhk9g.us-west-2.elasticbeanstalk.com/suggestions/today-topics-list"
         let session = URLSession.shared
         let url = URL(string: postEndpoint)!
                 
