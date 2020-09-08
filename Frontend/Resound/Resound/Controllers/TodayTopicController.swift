@@ -22,14 +22,6 @@ class TodayTopicController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
         updateText()
-        
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(leftSwipe)
-        
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
-        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
-        self.view.addGestureRecognizer(rightSwipe)
     }
     
     
@@ -83,17 +75,4 @@ class TodayTopicController: UIViewController {
     }
     */
 
-}
-
-extension UIViewController {
-    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
-        switch swipe.direction.rawValue {
-        case 1: //figure this one out
-            performSegue(withIdentifier: "swipeRight", sender: self)
-        case 2:
-            performSegue(withIdentifier: "swipeLeft", sender: self)
-        default:
-            break
-        }
-    }
 }

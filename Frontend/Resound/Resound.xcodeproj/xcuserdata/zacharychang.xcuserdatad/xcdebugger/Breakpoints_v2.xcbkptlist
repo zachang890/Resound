@@ -30,73 +30,10 @@
             filePath = "Resound/Controllers/TodayTopicController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "updateText()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FE5DB322-05A8-4D72-82AE-93F52982DF4F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Resound/Controllers/TodayTopicController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "swipeAction(swipe:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FE5DB322-05A8-4D72-82AE-93F52982DF4F - 42a9d117079e8853"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in Resound):__C.UIViewController.swipeAction(swipe: __C.UISwipeGestureRecognizer) -&gt; ()"
-                  moduleName = "Resound"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacharychang/Documents/Resound/Frontend/Resound/Resound/Controllers/TodayTopicController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "85">
-               </Location>
-               <Location
-                  uuid = "FE5DB322-05A8-4D72-82AE-93F52982DF4F - 42a9d117079e8853"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in Resound):__C.UIViewController.swipeAction(swipe: __C.UISwipeGestureRecognizer) -&gt; ()"
-                  moduleName = "Resound"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacharychang/Documents/Resound/Frontend/Resound/Resound/Controllers/TodayTopicController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  uuid = "FE5DB322-05A8-4D72-82AE-93F52982DF4F - 42a9d117079e8853"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(extension in Resound):__C.UIViewController.swipeAction(swipe: __C.UISwipeGestureRecognizer) -&gt; ()"
-                  moduleName = "Resound"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zacharychang/Documents/Resound/Frontend/Resound/Resound/Controllers/TodayTopicController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "236">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
