@@ -13,15 +13,19 @@ class TodayTopicController: UIViewController {
     @IBOutlet var firstTopic: UILabel!
     @IBOutlet var secondTopic: UILabel!
     @IBOutlet var thirdTopic: UILabel!
+    @IBOutlet var greeting: UILabel!
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
+    let greetings = ["Your focus for today:", "Let's think about these:", "Another day, here you go:", "Spread the word about these:"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = true
+        let number = Int.random(in: 0..<4)
+        greeting.text = greetings[number]
         updateText()
+        
+        tabBarItem.selectedImage = UIImage(named: "homekit")?.withRenderingMode(.alwaysOriginal);
+        tabBarItem.image = UIImage(named: "homekit");
     }
     
     
