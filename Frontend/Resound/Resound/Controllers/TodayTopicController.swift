@@ -24,8 +24,6 @@ class TodayTopicController: UIViewController {
         greeting.text = greetings[number]
         updateText()
         
-        tabBarItem.selectedImage = UIImage(named: "homekit")?.withRenderingMode(.alwaysOriginal);
-        tabBarItem.image = UIImage(named: "homekit");
     }
     
     
