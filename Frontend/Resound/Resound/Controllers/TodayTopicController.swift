@@ -24,6 +24,8 @@ class TodayTopicController: UIViewController {
         greeting.text = greetings[number]
         updateText()
         
+        
+        
     }
     
     
