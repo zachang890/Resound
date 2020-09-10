@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		963D3AF6250AAA21007D020A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D3AF5250AAA21007D020A /* NewsTableViewCell.swift */; };
-		963D3AF8250AC7CA007D020A /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D3AF7250AC7CA007D020A /* BaseTabBarController.swift */; };
 		966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0224FC57DA006A1328 /* AppDelegate.swift */; };
 		966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0424FC57DA006A1328 /* SceneDelegate.swift */; };
 		966CEA0A24FC57DA006A1328 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 966CEA0824FC57DA006A1328 /* Main.storyboard */; };
@@ -38,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		963D3AF5250AAA21007D020A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
-		963D3AF7250AC7CA007D020A /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		966CE9FF24FC57DA006A1328 /* Resound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966CEA0224FC57DA006A1328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		966CEA0424FC57DA006A1328 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 			children = (
 				96C88DCE2503E8110000127E /* TodayTopicController.swift */,
 				96C88DD32505EFAD0000127E /* HeadlinesTableViewController.swift */,
-				963D3AF7250AC7CA007D020A /* BaseTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,7 +258,6 @@
 			files = (
 				96C88DD42505EFAD0000127E /* HeadlinesTableViewController.swift in Sources */,
 				966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */,
-				963D3AF8250AC7CA007D020A /* BaseTabBarController.swift in Sources */,
 				963D3AF6250AAA21007D020A /* NewsTableViewCell.swift in Sources */,
 				966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */,
 				96C88DCF2503E8110000127E /* TodayTopicController.swift in Sources */,

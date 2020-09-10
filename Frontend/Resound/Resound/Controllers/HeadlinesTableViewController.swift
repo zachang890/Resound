@@ -17,7 +17,6 @@ class HeadlinesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
-        let tabBar = BaseTabBarController()
     }
 
     // MARK: - Table view data source
@@ -33,8 +32,8 @@ class HeadlinesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let tabBar = BaseTabBarController()
-        return String(describing: tabBar.titles[section])
+        var ending = ["Topic 1", "Topic 2", "Topic 3"]
+        return ending[section]
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,4 +47,9 @@ class HeadlinesTableViewController: UITableViewController {
         return cell
     }
 
+    
+    
+    func retrieveTitles() {
+        
+    }
 }
