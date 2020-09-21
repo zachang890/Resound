@@ -49,8 +49,8 @@ class HeadlinesTableViewController: UITableViewController {
 
     
     
-    func accessDynamo(topic: String) {
-        let postEndpoint: String = "http://backend-main.eba-24mqhk9g.us-west-2.elasticbeanstalk.com/suggestions/today-topics-list"
+    func accessDynamo(topic: String) { //current shut-off of aws systems
+        let postEndpoint: String = "http://backend-main.eba-24mqhk9g.us-west-2.elasticbeanstalk.com/suggestions/today-topics-list" //ensure that today-topics-list are refreshed daily
         let session = URLSession.shared
         let url = URL(string: postEndpoint)!
                 
