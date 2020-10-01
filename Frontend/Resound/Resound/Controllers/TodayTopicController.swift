@@ -14,6 +14,7 @@ class TodayTopicController: UIViewController {
     @IBOutlet var secondTopic: UILabel!
     @IBOutlet var thirdTopic: UILabel!
     @IBOutlet var greeting: UILabel!
+    @IBOutlet var date: UILabel!
     
     let greetings = ["Your focus for today:", "Let's think about these:", "Another day, here you go:", "Spread the word about these:"]
     

@@ -17,6 +17,12 @@ class HeadlinesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
     }
 
     // MARK: - Table view data source
@@ -35,6 +41,7 @@ class HeadlinesTableViewController: UITableViewController {
         var ending = ["Topic 1", "Topic 2", "Topic 3"]
         return ending[section]
     }
+    
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "datacell"
@@ -44,6 +51,7 @@ class HeadlinesTableViewController: UITableViewController {
         cell.headline.text = "bruh"
         cell.source.text = "nice"
         cell.time.text = "wyd"
+        cell.contentView.backgroundColor = UIColor.cyan
         return cell
     }
 
