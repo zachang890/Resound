@@ -15,18 +15,35 @@ class TodayTopicController: UIViewController {
     @IBOutlet var thirdTopic: UILabel!
     @IBOutlet var greeting: UILabel!
     @IBOutlet var date: UILabel!
+    @IBOutlet var resound: UILabel!
     
     let greetings = ["Your focus for today:", "Let's think about these:", "Another day, here you go:", "Spread the word about these:"]
     
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateText()
+        
         self.navigationController?.isNavigationBarHidden = true
         let number = Int.random(in: 0..<4)
         greeting.text = greetings[number]
-        updateText()
         
+        let d = Date()
+        let calendar = Calendar.current
+        let yr = String(calendar.component(.year, from: d))
+        let month = String(calendar.component(.month, from: d))
+        let day = String(calendar.component(.day, from: d))
+        let weekdayNum = calendar.component(.weekday, from: d)
         
+        let weekdayName = days[weekdayNum - 1]
         
+        date.text = weekdayName + ", " + month + "." + day + "." + yr
+        date?.layer.masksToBounds = true
+        date?.layer.cornerRadius = 5.0
+        
+        resound?.layer.masksToBounds = true
+        resound?.layer.cornerRadius = 5.0
     }
     
     
