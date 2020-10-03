@@ -40,10 +40,10 @@ class TodayTopicController: UIViewController {
         
         date.text = weekdayName + ", " + month + "." + day + "." + yr
         date?.layer.masksToBounds = true
-        date?.layer.cornerRadius = 5.0
+        date?.layer.cornerRadius = 15.0
         
         resound?.layer.masksToBounds = true
-        resound?.layer.cornerRadius = 5.0
+        resound?.layer.cornerRadius = 10.0
     }
     
     

@@ -11,13 +11,15 @@ import UIKit
 class HeadlinesTableViewController: UITableViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        return .lightContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
         navigationController?.hidesBarsOnSwipe = true
+        self.tableView.sectionHeaderHeight = 40
+        self.tableView.backgroundColor = UIColor.black
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +53,7 @@ class HeadlinesTableViewController: UITableViewController {
         cell.headline.text = "bruh"
         cell.source.text = "nice"
         cell.time.text = "wyd"
-        cell.contentView.backgroundColor = UIColor.cyan
+        cell.contentView.backgroundColor = UIColor.black
         return cell
     }
 
