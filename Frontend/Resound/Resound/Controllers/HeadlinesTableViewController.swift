@@ -11,15 +11,17 @@ import UIKit
 class HeadlinesTableViewController: UITableViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.hidesBarsOnSwipe = true
         self.tableView.sectionHeaderHeight = 40
-        self.tableView.backgroundColor = UIColor.black
+        self.tableView.backgroundColor = UIColor.cyan
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -31,17 +33,12 @@ class HeadlinesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        var ending = ["Topic 1", "Topic 2", "Topic 3"]
-        return ending[section]
+        return 9
     }
     
 
@@ -53,7 +50,7 @@ class HeadlinesTableViewController: UITableViewController {
         cell.headline.text = "bruh"
         cell.source.text = "nice"
         cell.time.text = "wyd"
-        cell.contentView.backgroundColor = UIColor.black
+        cell.contentView.backgroundColor = UIColor.cyan
         return cell
     }
 
