@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SafariServices
 
-class HeadlinesTableViewController: UITableViewController {
+class HeadlinesTableViewController: UITableViewController, SFSafariViewControllerDelegate {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .darkContent
@@ -52,6 +53,44 @@ class HeadlinesTableViewController: UITableViewController {
         cell.time.text = "wyd"
         cell.contentView.backgroundColor = UIColor.cyan
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urlString = "https://www.hackingwithswift.com"
+
+        if let url = URL(string: urlString) {
+            let vc = SFSafariViewController(url: url, entersReaderIfAvailable: true)
+            vc.delegate = self
+
+            present(vc, animated: true)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        //destructive makes the button red
+        
+        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
+            let defaultText = "Check out this article! Let's keep this in our thoughts today."
+
+            let activityController: UIActivityViewController
+            
+            activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            
+            //accomodate once again for the IPAD
+            if let popoverController = activityController.popoverPresentationController {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    popoverController.sourceView = cell
+                    popoverController.sourceRect = cell.bounds
+                }
+            }
+            self.present(activityController, animated: true, completion: nil)
+            completionHandler(true)
+        }
+        shareAction.backgroundColor = UIColor(red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+        shareAction.image = UIImage(systemName: "square.and.arrow.up")
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [shareAction])
+        return swipeConfiguration
     }
 
     

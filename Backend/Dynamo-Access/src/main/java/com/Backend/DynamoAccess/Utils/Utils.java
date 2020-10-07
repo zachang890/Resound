@@ -4,6 +4,9 @@ public class Utils {
 
     public static final String SERVICE_ENDPOINT = "dynamodb.us-west-2.amazonaws.com";
     public static final String SIGNING_REGION = "us-west-2";
+
+    public static final String ACCESS_KEY = "";
+    public static final String SECRET_KEY = "";
    
 
     public static final String REMOVED = "Removed";
