@@ -179,35 +179,35 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lmY-rS-H3E">
                                             <rect key="frame" x="6" y="3" width="339" height="60"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Na-SF-q4D">
-                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Na-SF-q4D" userLabel="thumbnail">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="c2v-D7-MA5"/>
-                                                        <constraint firstAttribute="height" constant="60" id="yc1-Qi-bKL"/>
+                                                        <constraint firstAttribute="width" constant="30" id="c2v-D7-MA5"/>
+                                                        <constraint firstAttribute="height" constant="30" id="yc1-Qi-bKL"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="30"/>
+                                                            <integer key="value" value="0"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="llW-wz-jYP">
-                                                    <rect key="frame" x="75" y="0.0" width="264" height="58.333333333333336"/>
+                                                    <rect key="frame" x="45" y="0.0" width="294" height="58.333333333333336"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zh-YU-ygA" userLabel="headline">
-                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="20.333333333333332"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="294" height="20.333333333333332"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Source" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLA-pc-bNq" userLabel="source">
-                                                            <rect key="frame" x="0.0" y="21.333333333333332" width="264" height="17.999999999999996"/>
+                                                            <rect key="frame" x="0.0" y="21.333333333333332" width="294" height="17.999999999999996"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc4-FD-WhK" userLabel="time">
-                                                            <rect key="frame" x="0.0" y="40.333333333333336" width="264" height="18"/>
+                                                            <rect key="frame" x="0.0" y="40.333333333333336" width="294" height="18"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -233,6 +233,7 @@
                                 <connections>
                                     <outlet property="headline" destination="4Zh-YU-ygA" id="jqe-P2-YQZ"/>
                                     <outlet property="source" destination="VLA-pc-bNq" id="hoN-a0-xDw"/>
+                                    <outlet property="thumb" destination="2Na-SF-q4D" id="PnR-bf-qkI"/>
                                     <outlet property="time" destination="tc4-FD-WhK" id="eQ3-gk-KuJ"/>
                                 </connections>
                             </tableViewCell>
