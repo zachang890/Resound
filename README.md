@@ -11,4 +11,6 @@ Technologies Used:
 - BeautifulSoup, Selenium WebDriver
 - Languages: Python, Java, Swift
 
+![alt text](https://github.com/zachang890/Resound/blob/master/Pictures/topics-page.jpeg)
+![alt text](https://github.com/zachang890/Resound/blob/master/Pictures/news-page.jpeg)
 ![alt text](https://github.com/zachang890/Resound/blob/master/Pictures/maps-page.jpeg)
