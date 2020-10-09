@@ -30,7 +30,9 @@ class HeadlinesTableViewController: UITableViewController, SFSafariViewControlle
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.hidesBarsOnSwipe = true
         self.tableView.sectionHeaderHeight = 40
-        self.tableView.backgroundColor = UIColor.cyan
+        self.tableView.backgroundColor = UIColor.systemTeal
+        
+        navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1.0)]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +64,7 @@ class HeadlinesTableViewController: UITableViewController, SFSafariViewControlle
         
         cell.thumb.image = UIImage(named: images[indexPath.row/3])
         
-        cell.contentView.backgroundColor = UIColor.cyan
+        cell.contentView.backgroundColor = UIColor.systemTeal
         return cell
     }
     

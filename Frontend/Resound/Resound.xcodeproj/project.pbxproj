@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		960DA2A0252ED6EC001D2A34 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DA29F252ED6EC001D2A34 /* MapViewController.swift */; };
 		963D3AF6250AAA21007D020A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963D3AF5250AAA21007D020A /* NewsTableViewCell.swift */; };
 		966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0224FC57DA006A1328 /* AppDelegate.swift */; };
 		966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CEA0424FC57DA006A1328 /* SceneDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		960DA29F252ED6EC001D2A34 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		963D3AF5250AAA21007D020A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		966CE9FF24FC57DA006A1328 /* Resound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Resound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		966CEA0224FC57DA006A1328 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				96C88DCE2503E8110000127E /* TodayTopicController.swift */,
 				96C88DD32505EFAD0000127E /* HeadlinesTableViewController.swift */,
+				960DA29F252ED6EC001D2A34 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C88DD42505EFAD0000127E /* HeadlinesTableViewController.swift in Sources */,
+				960DA2A0252ED6EC001D2A34 /* MapViewController.swift in Sources */,
 				966CEA0324FC57DA006A1328 /* AppDelegate.swift in Sources */,
 				963D3AF6250AAA21007D020A /* NewsTableViewCell.swift in Sources */,
 				966CEA0524FC57DA006A1328 /* SceneDelegate.swift in Sources */,
