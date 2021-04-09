@@ -1,4 +1,4 @@
-# Resound: Global Awareness
+# Resound: Global Awareness (Paused, Finished)
 
 (Framework publicly available, can be easily replaced with AWS technologies: omitted for cost and security purposes)
 Features: 
